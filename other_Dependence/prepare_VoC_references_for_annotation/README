@@ -1,3 +1,5 @@
 Prepare barcode references for each SARS-CoV-2 vanriants of concerns (VoCs)
 
 Dominant mutations, hierachical structure for all VoCs from: https://cov-spectrum.org/
+
+covspectrum_variant_of_interest_hierachical_10182023@0.9_v2.mat is created using function prepare_barcode_covspectrum_v2.m
