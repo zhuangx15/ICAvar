@@ -291,7 +291,10 @@ if step_limit_potential_novel_pool == 1  %clustering
     %% potential novel: first eliminate known ones;
 %     clustering_method = 'hierachical';
     load([save_path,'\sig_SNPs_over_time.mat'],'sig_snp_with_sig_time_change_name_f','S_snp_recode_del_t');
-    potential_novel_save_path = [save_path,'\potential_novel']; mkdir_XZ(potential_novel_save_path);
+    potential_novel_save_path = [save_path,'\potential_novel']; 
+    if ~exist(potential_novel_save_path,'dir')
+        mkdir(potential_novel_save_path);
+    end
     [~,sig_snp_with_sig_time_change_name_f_recode_del,feature_remove] = recode_deletion...
         (genome_fasta_file,sig_snp_with_sig_time_change_name_f);
     % eliminate known ones;
@@ -341,7 +344,9 @@ if step_limit_potential_novel_pool == 1  %clustering
         S_potential_novel_all_ICA_zscore(:,j) = S_tmp_all_ica_zscore(:,ind_min);
     end
     S_potential_novel_all_ICA_zscore = S_potential_novel_all_ICA_zscore(ind_recent,:);
-    mkdir_XZ([potential_novel_save_path,'\',clustering_method]);
+    if ~exist([potential_novel_save_path,'\',clustering_method],'dir')
+        mkdir([potential_novel_save_path,'\',clustering_method]);
+    end
     switch clustering_method
         case 'hierachical'
             %% hierachical clustering
