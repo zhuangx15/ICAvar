@@ -23,6 +23,7 @@ function [Yf_recode_del,feature_name_recode_del,feature_remove] = recode_deletio
     %% recode deletion in iVar: RefLoc-Deleted --> Ref@deleted[Loc+1]- (Ref@deleted = RefLoc+1;
     count = 1;
     count1 = 1; %number of insertions removed
+    feature_remove = [];
     for i = 1:Nf
         if ~(contains(feature_name{i},'-') || contains(feature_name{i},'+'))
             feature_name_recode_del{count,1} = feature_name{i};
