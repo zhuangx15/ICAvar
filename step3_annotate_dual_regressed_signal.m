@@ -242,5 +242,5 @@ function step3_annotate_dual_regressed_signal(ica_save_path,Yf_sample_date,...
         Variant_of_interest_ICA,[],'ICA-final-threshold');
     saveas(h3,[final_detection_save_path,'\detected_by_ICA_hierachical_threshold_remove_Nsamplet1.jpg']);
     xlswrite([final_detection_save_path,'\first_last_date_new_criteria_11132023.xlsx'],xlsout_first_last_date,'remove_Nsamplet=1');
-    disp(['Results saved under: ', final_detection_save_path]);
+    disp(['Annotated results saved under: ', final_detection_save_path]);
 end

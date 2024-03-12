@@ -7,7 +7,10 @@ function step2_dual_regression(freq_f1,loc_f1_Yf,freq_f1_date,ica_save_path,iq_t
 %   loc_f1_Yf: Nlocation x 1; mutation location in freq_f1
 %   ica_save_path: contains icasso/ica results;
 %   iq_threshold: Estimate stability index; [0,1], 1--> most stable;
-%   zscore_thre: 
+%   zscore_thre: zscore-threshold on ICA source file; 2 --> keep 5 positions (following Gaussian distribution);
+%   interval_days: interval days to group wastewater samples together for strain detection through annotate dual-regressed source matrix
+% Output:
+%   dual-regressed source file for each interval time period stored under [ica_save_path,'\dual_regression'];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if ~exist("interval_days",'var')
     interval_days = 7;
@@ -52,6 +55,11 @@ end
 S_threshold = abs(S_zscore) >= zscore_thre; %threshold_for_significant_SNPs_on_S;
 h7 = figure(18852);
 h7 = signalplot(S_threshold,h7);
+xlabel('Genome-position');
+ylabel('Source signal (zscore)');
+title(['Thresholded at ',num2str(zscore_thre)]);
+set(gca,'FontSize',16);
+box on; grid on;
 saveas(h7,[ica_save_path,'\S_threshold@',num2str(zscore_thre),'.jpg']);
 
 %% dual regression [might not be right] since A is already the loading for that sample
@@ -89,9 +97,12 @@ for id_date = 1:Ndate
     save([dual_regression_save_path,'\',date_vec{id_date},'.mat'],...
         'S_sub_tmp_zscore','S_sub_tmp','tc_sub');
 end
-h1 = figure(123645864);
+h1 = figure(123645864); set(h1,'Position',[50,50,2400,600]);
 plot(1:Ndate,Nsamplet,'-o','LineWidth',2);
 xticks(1:Ndate);xticklabels(date_vec);
+title(['Number of Samples per ',num2str(interval_days),'days']);
+set(gca,'FontSize',16);
+box on; grid on;
 saveas(h1,[ica_save_path,'\Nsamplet.jpg']);
 end
 
