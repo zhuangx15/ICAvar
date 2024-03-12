@@ -1,4 +1,4 @@
-# Prepare barcode references for each SARS-CoV-2 vanriants of concerns (VoCs)
+Prepare barcode references for each SARS-CoV-2 vanriants of concerns (VoCs)
 
 ## Dominant mutations (\nt) for all VoCs from: https://cov-spectrum.org/;
 example files under nt\
