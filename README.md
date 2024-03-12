@@ -2,7 +2,7 @@
 Early Detection of Novel SARS-CoV-2 Variants from Urban and Rural Wastewater through Genome Sequencing and Machine Learning
 
 Software and Packages required: 
-Matlab: https://www.mathworks.com/
+Matlab: https://www.mathworks.com/ 
 ICAsso*: https://research.ics.aalto.fi/ica/icasso/
 FastICA*: https://research.ics.aalto.fi/ica/fastica/
 *Under other_Dependence folder we have provided icasso122 and FastICA_25 packages for the purpose of testing the code. You MUST obtain proper usage permissions from the orignial authors. 
