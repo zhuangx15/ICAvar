@@ -2,6 +2,7 @@
 Early Detection of Novel SARS-CoV-2 Variants from Urban and Rural Wastewater through Genome Sequencing and Machine Learning
 
 Dependence: 
+Matlab: https://www.mathworks.com/
 ICAsso: https://research.ics.aalto.fi/ica/icasso/
 
 Steps:
