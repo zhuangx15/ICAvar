@@ -1,11 +1,13 @@
 Prepare barcode references for each SARS-CoV-2 vanriants of concerns (VoCs)
 
 ## Dominant mutations (\nt) for all VoCs from: https://cov-spectrum.org/;
-example files under nt\
+Example files under nt\
+! These files need to be created for any interested VoC before running any steps.
 
 ## hierachical structure (e.g., parent VoC) for all VoCs from: https://cov-spectrum.org/;
-example file: family_tree_barcode_of_interest_delta_omicron_github.xlsx <br>
-only include VoCs that would like to be focused in this file;
+Example file: family_tree_barcode_of_interest_delta_omicron_github.xlsx <br>
+! This file needs to bcreated before running any steps. Any interested VoCs need to be included;
 
-## Create covspectrum_variant_of_interest_hierachical_10182023@0.9_v2.mat using function prepare_barcode_covspectrum_v2.m
+## Create covspectrum_variant_of_interest_hierachical_10182023@0.9_v2.mat using function prepare_barcode_covspectrum_v2.m 
+Example to run this function is given under script_example_code_create_barcode_mat_file.m
 To test our code, this file is provided. It needs to be generated if you are interested in a different set of VoCs.
