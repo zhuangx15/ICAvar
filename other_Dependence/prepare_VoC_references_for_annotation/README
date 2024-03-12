@@ -8,3 +8,4 @@ example file: family_tree_barcode_of_interest_delta_omicron_github.xlsx <br>
 only include VoCs that would like to be focused in this file;
 
 ## Create covspectrum_variant_of_interest_hierachical_10182023@0.9_v2.mat using function prepare_barcode_covspectrum_v2.m
+To test our code, this file is provided. It needs to be generated if you are interested in a different set of VoCs.
