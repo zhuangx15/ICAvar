@@ -1,0 +1,3 @@
+Running all 4 steps with covid_test_data.m should produce the expected output files under the folder 10\
+
+The running time should be less than 5 minutes on a "normal" desktop computer.
