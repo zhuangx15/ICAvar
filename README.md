@@ -15,7 +15,7 @@ Early Detection of Novel SARS-CoV-2 Variants from Urban and Rural Wastewater thr
 
 ## Testing dataset:
 script_example_code_test_all_steps.m provides an example of running all four steps with sample_dataset\covid_test_data.mat <br>
-The expected outcomes are under sample_dataset\expected_outcome\
+The expected outcomes are under sample_dataset\expected_output\
 
 Results reported in Zhuang et al., 2024 were produced using sample_dataset\Yf_all_ivar_variant_sep21_nov23_50xcoverage_gt_80_vRefine_vNoDup_github.mat
 
